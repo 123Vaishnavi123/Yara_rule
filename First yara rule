@@ -1,0 +1,12 @@
+rule trojan_ru
+{
+	meta:
+     
+      		Description = " Simple yara rule"
+   
+	string:
+     		$a = "DemRyusAhttpsd.Open "GET", "https://www.dencedence.denceasdq/12/3232", False" 
+     		$b = "ToByBYAurls = "http://64.110.25.151/index.php?faxid=35443&opt=" "
+condition:
+     ($a and $b)
+}
